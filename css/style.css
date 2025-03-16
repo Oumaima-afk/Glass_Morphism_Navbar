@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url(../fonts/PlayfairDisplay-Regular.ttf);
+}
+
+body {
+  background-image: url(../images/chateau-versailles.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+nav {
+  font-family: "PlayfairDisplay";
+  margin-top: 10%;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  position: fixed;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+}
+
+ul {
+  display: flex;
+  padding: 0;
+  justify-content: space-around;
+  list-style-type: none;
+  color: white;
+}
+
+ul li {
+  padding: 5px 10px; /* Padding normal pour les items */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Transition fluide */
+}
+
+ul li:hover {
+  /* background-color: rgba(0, 0, 0, 0.1); */
+  color: rgb(69, 48, 1);
+  transform: scale(1.1); /* Applique un zoom sans changer la taille réelle */
+  border-radius: 20%; /* Ajoute un léger arrondi sur survol */
+}
