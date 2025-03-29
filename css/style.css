@@ -4,18 +4,20 @@
 }
 
 body {
-  background-image: url(../images/chateau-versailles.jpg);
+  background-image: url(../images/moutain-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  text-align: center;
 }
 
 nav {
   font-family: "PlayfairDisplay";
-  margin-top: 10%;
-  background-color: rgba(255, 255, 255, 0.15);
+  font-size: 1rem;
+  margin-top: 20%;
   backdrop-filter: blur(10px);
   padding: 1rem;
   position: fixed;
+  display: block;
   width: 80%;
   left: 50%;
   transform: translateX(-50%);
@@ -34,13 +36,41 @@ ul {
 }
 
 ul li {
+  width: 30%;
   padding: 5px 10px; /* Padding normal pour les items */
-  transition: transform 0.3s ease, background-color 0.3s ease; /* Transition fluide */
+  position: relative;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 ul li:hover {
-  /* background-color: rgba(0, 0, 0, 0.1); */
-  color: rgb(69, 48, 1);
-  transform: scale(1.1); /* Applique un zoom sans changer la taille réelle */
-  border-radius: 20%; /* Ajoute un léger arrondi sur survol */
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(1.05); /* Applique un zoom sans changer la taille réelle */
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transform: translateX(-1em);
+  top: 100%;
+  background-color: rgb(72, 72, 72, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  min-width: 150px;
+  border-radius: 10px;
+}
+
+.dropdown li {
+  width: 100%;
+}
+
+ul li:hover .dropdown {
+  visibility: visible;
+  opacity: 1;
 }
